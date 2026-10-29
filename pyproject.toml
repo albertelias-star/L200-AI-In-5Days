@@ -103,3 +103,9 @@ asyncio_default_fixture_loop_scope = "session"
 packages = ["app","frontend"]
 
 
+
+# Resolve against public PyPI so the lockfile works for anyone (incl. GitHub Actions).
+[[tool.uv.index]]
+name = "pypi"
+url = "https://pypi.org/simple"
+default = true
