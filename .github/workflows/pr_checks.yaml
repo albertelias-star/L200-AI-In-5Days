@@ -26,6 +26,7 @@ on:
 
 jobs:
   test:
+    if: ${{ vars.CICD_PROJECT_ID != '' }}
     runs-on: ubuntu-latest
     permissions:
       contents: 'read'

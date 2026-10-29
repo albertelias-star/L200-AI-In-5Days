@@ -26,6 +26,9 @@ on:
 
 jobs:
   deploy_and_test_staging:
+    # Skip cleanly until the CI/CD infrastructure (WIF + repo variables) is
+    # provisioned with `agents-cli infra cicd`; see README "Deploy".
+    if: ${{ vars.STAGING_PROJECT_ID != '' }}
     runs-on: ubuntu-latest
     permissions:
       contents: 'read'
