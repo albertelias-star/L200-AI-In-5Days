@@ -1,0 +1,282 @@
+{
+ "akkawi cheese": {
+  "category": "Dairy",
+  "qar_per_unit": 0.045
+ },
+ "avocado": {
+  "category": "Produce",
+  "qar_per_unit": 4.5
+ },
+ "baharat spice": {
+  "category": "Pantry",
+  "qar_per_unit": 0.12
+ },
+ "banana": {
+  "category": "Produce",
+  "qar_per_unit": 0.9
+ },
+ "basmati rice": {
+  "category": "Pantry",
+  "qar_per_unit": 0.012
+ },
+ "bell pepper": {
+  "category": "Produce",
+  "qar_per_unit": 2.0
+ },
+ "biryani spice": {
+  "category": "Pantry",
+  "qar_per_unit": 0.12
+ },
+ "broccoli": {
+  "category": "Produce",
+  "qar_per_unit": 0.018
+ },
+ "brown lentils": {
+  "category": "Pantry",
+  "qar_per_unit": 0.009
+ },
+ "bulgur": {
+  "category": "Pantry",
+  "qar_per_unit": 0.01
+ },
+ "canned tuna": {
+  "category": "Pantry",
+  "qar_per_unit": 0.05
+ },
+ "carrot": {
+  "category": "Produce",
+  "qar_per_unit": 0.5
+ },
+ "cashews": {
+  "category": "Pantry",
+  "qar_per_unit": 0.09
+ },
+ "cherry tomatoes": {
+  "category": "Produce",
+  "qar_per_unit": 0.02
+ },
+ "chia seeds": {
+  "category": "Pantry",
+  "qar_per_unit": 0.08
+ },
+ "chicken breast": {
+  "category": "Meat & Fish",
+  "qar_per_unit": 0.035
+ },
+ "chicken thighs": {
+  "category": "Meat & Fish",
+  "qar_per_unit": 0.028
+ },
+ "chickpeas (canned)": {
+  "category": "Pantry",
+  "qar_per_unit": 0.008
+ },
+ "coconut milk": {
+  "category": "Pantry",
+  "qar_per_unit": 0.015
+ },
+ "couscous (gluten-free corn)": {
+  "category": "Pantry",
+  "qar_per_unit": 0.025
+ },
+ "cucumber": {
+  "category": "Produce",
+  "qar_per_unit": 0.8
+ },
+ "cumin": {
+  "category": "Pantry",
+  "qar_per_unit": 0.1
+ },
+ "curry powder": {
+  "category": "Pantry",
+  "qar_per_unit": 0.1
+ },
+ "dates": {
+  "category": "Pantry",
+  "qar_per_unit": 0.04
+ },
+ "dried lime": {
+  "category": "Pantry",
+  "qar_per_unit": 0.5
+ },
+ "eggs": {
+  "category": "Dairy",
+  "qar_per_unit": 0.75
+ },
+ "fava beans (canned)": {
+  "category": "Pantry",
+  "qar_per_unit": 0.008
+ },
+ "feta cheese": {
+  "category": "Dairy",
+  "qar_per_unit": 0.05
+ },
+ "firm tofu": {
+  "category": "Produce",
+  "qar_per_unit": 0.025
+ },
+ "flatbread dough": {
+  "category": "Bakery",
+  "qar_per_unit": 0.01
+ },
+ "garlic": {
+  "category": "Produce",
+  "qar_per_unit": 0.4
+ },
+ "greek yogurt": {
+  "category": "Dairy",
+  "qar_per_unit": 0.02
+ },
+ "halloumi": {
+  "category": "Dairy",
+  "qar_per_unit": 0.06
+ },
+ "hammour fillet": {
+  "category": "Meat & Fish",
+  "qar_per_unit": 0.09
+ },
+ "labneh": {
+  "category": "Dairy",
+  "qar_per_unit": 0.025
+ },
+ "lasagne sheets": {
+  "category": "Pantry",
+  "qar_per_unit": 0.02
+ },
+ "lemon": {
+  "category": "Produce",
+  "qar_per_unit": 0.7
+ },
+ "milk": {
+  "category": "Dairy",
+  "qar_per_unit": 0.007
+ },
+ "minced beef": {
+  "category": "Meat & Fish",
+  "qar_per_unit": 0.045
+ },
+ "minced lamb": {
+  "category": "Meat & Fish",
+  "qar_per_unit": 0.055
+ },
+ "mixed berries": {
+  "category": "Frozen",
+  "qar_per_unit": 0.04
+ },
+ "mozzarella": {
+  "category": "Dairy",
+  "qar_per_unit": 0.05
+ },
+ "mushrooms": {
+  "category": "Produce",
+  "qar_per_unit": 0.025
+ },
+ "olive oil": {
+  "category": "Pantry",
+  "qar_per_unit": 0.035
+ },
+ "onion": {
+  "category": "Produce",
+  "qar_per_unit": 0.35
+ },
+ "parsley": {
+  "category": "Produce",
+  "qar_per_unit": 0.03
+ },
+ "peanut butter": {
+  "category": "Pantry",
+  "qar_per_unit": 0.035
+ },
+ "pita bread": {
+  "category": "Bakery",
+  "qar_per_unit": 0.5
+ },
+ "potatoes": {
+  "category": "Produce",
+  "qar_per_unit": 0.005
+ },
+ "quinoa": {
+  "category": "Pantry",
+  "qar_per_unit": 0.035
+ },
+ "ras el hanout": {
+  "category": "Pantry",
+  "qar_per_unit": 0.15
+ },
+ "red lentils": {
+  "category": "Pantry",
+  "qar_per_unit": 0.009
+ },
+ "rice noodles": {
+  "category": "Pantry",
+  "qar_per_unit": 0.02
+ },
+ "ricotta": {
+  "category": "Dairy",
+  "qar_per_unit": 0.04
+ },
+ "rolled oats": {
+  "category": "Pantry",
+  "qar_per_unit": 0.012
+ },
+ "romaine lettuce": {
+  "category": "Produce",
+  "qar_per_unit": 4.0
+ },
+ "salmon fillet": {
+  "category": "Meat & Fish",
+  "qar_per_unit": 0.11
+ },
+ "shawarma spice": {
+  "category": "Pantry",
+  "qar_per_unit": 0.12
+ },
+ "shrimp": {
+  "category": "Meat & Fish",
+  "qar_per_unit": 0.07
+ },
+ "spinach": {
+  "category": "Produce",
+  "qar_per_unit": 0.025
+ },
+ "sumac": {
+  "category": "Pantry",
+  "qar_per_unit": 0.12
+ },
+ "sweet potato": {
+  "category": "Produce",
+  "qar_per_unit": 0.008
+ },
+ "tahini": {
+  "category": "Pantry",
+  "qar_per_unit": 0.04
+ },
+ "tamari (gluten-free soy sauce)": {
+  "category": "Pantry",
+  "qar_per_unit": 0.06
+ },
+ "tomato passata": {
+  "category": "Pantry",
+  "qar_per_unit": 0.01
+ },
+ "tomatoes": {
+  "category": "Produce",
+  "qar_per_unit": 0.006
+ },
+ "turmeric": {
+  "category": "Pantry",
+  "qar_per_unit": 0.1
+ },
+ "wholemeal bread": {
+  "category": "Bakery",
+  "qar_per_unit": 0.015
+ },
+ "za'atar": {
+  "category": "Pantry",
+  "qar_per_unit": 0.12
+ },
+ "zucchini": {
+  "category": "Produce",
+  "qar_per_unit": 1.2
+ }
+}

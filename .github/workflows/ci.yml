@@ -1,0 +1,102 @@
+# Copyright 2026 Albert Elias
+# SPDX-License-Identifier: Apache-2.0
+#
+# Credential-free quality gate that runs on every push and pull request.
+# Cloud-backed integration tests, ADK evals and deployments live in
+# pr_checks.yaml / staging.yaml / deploy-to-prod.yaml (Workload Identity
+# Federation, no service-account keys).
+
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-and-test:
+    name: Lint, type-check and unit tests
+    runs-on: ubuntu-latest
+    env:
+      MEALMATE_ENABLE_MCP: "false"
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies (locked)
+        run: uv sync --locked --extra lint
+
+      - name: Ruff lint
+        run: uv run ruff check app tests mcp_servers scripts
+
+      - name: Ruff format check
+        run: uv run ruff format --check app tests mcp_servers scripts
+
+      - name: Spell check
+        run: uv run codespell app tests mcp_servers README.md
+
+      - name: Unit tests with coverage report
+        run: uv run pytest tests/unit -q --junitxml=test-results.xml
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: unit-test-results
+          path: test-results.xml
+
+  security:
+    name: Security scans (SAST, SCA, secrets)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies (locked)
+        run: uv sync --locked --extra lint
+
+      - name: SAST - Bandit
+        run: uv run bandit -r app mcp_servers -ll
+
+      - name: SCA - pip-audit (known CVEs in locked deps)
+        run: |
+          uv export --locked --no-hashes --format requirements-txt > /tmp/requirements.txt
+          uv run pip-audit -r /tmp/requirements.txt --progress-spinner off || echo "::warning::pip-audit reported advisories"
+
+      - name: Secret scan - gitleaks
+        uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  mcp-smoke:
+    name: Pantry MCP server smoke test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v8.0.0
+        with:
+          python-version: "3.12"
+      - name: Install dependencies (locked)
+        run: uv sync --locked
+      - name: List tools over stdio
+        run: uv run python scripts/mcp_smoke_test.py
