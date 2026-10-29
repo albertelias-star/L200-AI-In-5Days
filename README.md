@@ -219,6 +219,19 @@ specs/                  # Gherkin behaviour specs (spec-driven development)
 .github/workflows/      # CI, PR eval gate, staging, prod
 ```
 
+## How this was built
+
+This project was built the way the course recommends: **agentic engineering with a human in the loop**.
+
+- **Me (Albert Elias):**
+  - chose the problem and the Concierge track;
+  - supplied the course materials the design had to follow (whitepapers, tutorials, labs);
+  - approved the MealMate concept and architecture;
+  - provisioned the Google Cloud (Argolis) project, service account and APIs;
+  - reviewed the results and ran the evaluation.
+- **AI coding agent (Google's internal Jetski agent):** acted as pair programmer. It read the course materials, scaffolded the project with `agents-cli`, implemented the agents, tools, guardrails, tests, evals and CI/CD, and verified everything by running it.
+- **Process:** spec-driven development ([`specs/mealmate.feature`](specs/mealmate.feature)), deterministic tests plus LLM-judged evals, and CI gates. These are the verification practices from *The New SDLC with Vibe Coding* and *Spec-Driven Development*, so the code is checked by tests and evals rather than trusted because it "looks right".
+
 ## Limitations & next steps
 
 - Recipes and prices are synthetic. A real deployment would put a grocery partner's catalog API behind the MCP server.
